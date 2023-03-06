@@ -1,0 +1,24 @@
+# -*- mode: org; fill-column: 78; -*-
+# Time-stamp: <2023-03-07 00:35:04 krylon>
+#+TAGS: html(h) javascript(j) go(g) web(w) internals(i) ui(u) bug(b) feature(f)
+#+TAGS: testing(t) network(n) optimize(o) refactor(r) cleanup(c)
+#+TODO: TODO(t)  RESEARCH(r) IMPLEMENT(i) TEST(e) | DONE(d) FAILED(f) CANCELLED(c)
+#+TODO: MEDITATE(m) PLANNING(p)
+#+PRIORITIES: A G D
+
+* Rolodex
+  Rolodex is a contact manager / address book type application.
+  Goals include:
+  + multiple frontends (web interface, GUI)
+  + multiple backends (LDAP, relational database, SQLite, etc.)
+  + import and export from/to various sources and formats
+  + synchronization across several instances / backends
+** Clocktable
+   I use org-mode as a simple project management tool, including time
+   tracking.
+   #+BEGIN: clocktable :scope file :maxlevel 202 :emphasize t
+   #+CAPTION: Clock summary at [2023-03-02 Do 19:39]
+   #+END:
+** Diary
+** Components
+** Bugs
