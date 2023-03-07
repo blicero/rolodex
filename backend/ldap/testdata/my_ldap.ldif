@@ -1,0 +1,14 @@
+## Time-stamp: <2023-03-05 18:52:37 krylon>
+
+## Root
+dn: dc=krylon,dc=net
+dc: krylon
+objectClass: dcObject
+objectClass: organizationalUnit
+ou: Krylon Dot Net
+
+## Meine Kontakte
+dn: ou=contacts,dc=krylon,dc=net
+ou: contacts
+objectClass: organizationalUnit
+
