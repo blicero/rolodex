@@ -1,0 +1,23 @@
+# Time-stamp: <2023-03-07 22:11:10 krylon>
+
+##
+dn: cn=Max Mustermann,ou=contacts,dc=krylon,dc=net
+cn: Max Mustermann
+objectClass: inetOrgPerson
+sn: Mustermann
+givenName: Max
+mail: m.mustermann@example.com
+telephoneNumber: +49 521 560 63 96
+mobile: +49 175 685 95 49
+
+
+##
+dn: cn=Mechthild Mustermann,ou=contacts,dc=krylon,dc=net
+cn: Mechthild Mustermann
+objectClass: inetOrgPerson
+sn: Mustermann
+givenName: Mechthild
+mail: mechthild.mustermann@example.com
+telephoneNumber: +49 521 560 63 97
+mobile: +49 175 923 50 81
+
