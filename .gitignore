@@ -1,4 +1,4 @@
-# Time-stamp: <2023-03-06 22:51:37 krylon>
+# Time-stamp: <2023-03-07 22:13:27 krylon>
 # Emacs backup and auto-save files
 *~
 .\#*
@@ -110,6 +110,9 @@ bak.guang
 
 rolodex
 bak.rolodex
+
+# LDAP schema files
+*.schema
 
 *_string.go
 *_gen.go
