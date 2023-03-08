@@ -1,0 +1,39 @@
+# Time-stamp: <2023-03-08 18:24:30 krylon>
+
+## more dummy contacts
+
+dn: cn=Lisa Simpson,ou=private,ou=contacts,dc=krylon,dc=net
+cn: Lisa Simpson
+objectClass: inetOrgPerson
+sn: Simpson
+givenName: Lisa
+streetAddress: 742 Evergreen Terrace
+l: Springfield
+mail: lisa.simpson@springfield.net
+
+dn: cn=Bart Simpson,ou=private,ou=contacts,dc=krylon,dc=net
+cn: Bart Simpson
+objectClass: inetOrgPerson
+sn: Simpson
+givenName: Bart
+streetAddress: 742 Evergreen Terrace
+l: Springfield
+mail: bart.simpson@springfield.net
+
+dn: cn=Homer Simpson,ou=work,ou=contacts,dc=krylon,dc=net
+cn: Homer Simpson
+objectClass: inetOrgPerson
+sn: Simpson
+givenName: Homer
+streetAddress: 123 Nuclear Road
+l: Springfield
+mail: homer.simpson@springfield-nuclear.com
+
+dn: cn=Waylon Smithers,ou=work,ou=contacts,dc=krylon,dc=net
+cn: Waylon Smithers
+objectClass: inetOrgPerson
+sn: Smithers
+givenName: Waylon
+streetAddress: 123 Nuclear Road
+l: Springfield
+mail: waylon.smithers@springfield-nuclear.com

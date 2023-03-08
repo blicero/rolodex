@@ -1,0 +1,12 @@
+# Time-stamp: <2023-03-08 18:24:10 krylon>
+
+## subtrees
+
+dn: ou=private,ou=contacts,dc=krylon,dc=net
+ou: private
+objectClass: organizationalUnit
+
+dn: ou=work,ou=contacts,dc=krylon,dc=net
+ou: work
+objectClass: organizationalUnit
+

@@ -1,6 +1,6 @@
-# Time-stamp: <2023-03-07 22:11:10 krylon>
+# Time-stamp: <2023-03-08 18:24:28 krylon>
 
-##
+## dummy contact 1
 dn: cn=Max Mustermann,ou=contacts,dc=krylon,dc=net
 cn: Max Mustermann
 objectClass: inetOrgPerson
@@ -11,7 +11,7 @@ telephoneNumber: +49 521 560 63 96
 mobile: +49 175 685 95 49
 
 
-##
+## dummy contact 2
 dn: cn=Mechthild Mustermann,ou=contacts,dc=krylon,dc=net
 cn: Mechthild Mustermann
 objectClass: inetOrgPerson
@@ -20,4 +20,3 @@ givenName: Mechthild
 mail: mechthild.mustermann@example.com
 telephoneNumber: +49 521 560 63 97
 mobile: +49 175 923 50 81
-
