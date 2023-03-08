@@ -2,8 +2,9 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 01. 02. 2021 by Benjamin Walkenhorst
 // (c) 2021 Benjamin Walkenhorst
-// Time-stamp: <2023-03-07 00:47:24 krylon>
+// Time-stamp: <2023-03-08 22:01:41 krylon>
 
+//go:build ignore
 // +build ignore
 
 package main
@@ -66,13 +67,13 @@ var candidates = map[string][]string{
 	"vet": []string{
 		"common",
 		"common/logfacility",
-		"backend/ldap",
+		"backend/padl",
 		"object",
 	},
 	"lint": []string{
 		"common",
 		"common/logfacility",
-		"backend/ldap",
+		"backend/padl",
 		"object",
 	},
 }
