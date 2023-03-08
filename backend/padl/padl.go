@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 07. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-08 21:56:36 krylon>
+// Time-stamp: <2023-03-08 22:01:23 krylon>
 
 // Package padl uses an LDAP directory as its backend.
 // I wanted to name the package ldap, which would have been the obvious name,
@@ -24,6 +24,7 @@ type LDAPConnection struct {
 	conn *ldap.Conn  // nolint: unused
 }
 
+// Connect opens a connection to an LDAP directory.
 func Connect(addr string) (*LDAPConnection, error) {
 	var (
 		err error
@@ -32,5 +33,12 @@ func Connect(addr string) (*LDAPConnection, error) {
 
 	if l.log, err = common.GetLogger(logfacility.LDAP); err != nil {
 		return nil, err
-	} // else if l.conn, err = ldap.
+	} else if l.conn, err = ldap.DialURL(addr); err != nil {
+		l.log.Printf("[ERROR] Failed to connect to directory server %s: %s\n",
+			addr,
+			err.Error())
+		return nil, err
+	}
+
+	return l, nil
 } // func Connect(addr string) (*LDAPConnection, error)
