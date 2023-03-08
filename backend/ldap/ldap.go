@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 07. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-07 00:47:57 krylon>
+// Time-stamp: <2023-03-08 18:55:58 krylon>
 
 // Package ldap uses an LDAP directory as its backend.
 package ldap
@@ -10,6 +10,8 @@ package ldap
 import (
 	"log"
 
+	"github.com/blicero/rolodex/common"
+	"github.com/blicero/rolodex/common/logfacility"
 	"github.com/go-ldap/ldap/v3"
 )
 
@@ -19,3 +21,14 @@ type LDAPConnection struct {
 	log  *log.Logger // nolint: unused
 	conn *ldap.Conn  // nolint: unused
 }
+
+func Connect(addr string) (*LDAPConnection, error) {
+	var (
+		err error
+		l   = &LDAPConnection{addr: addr}
+	)
+
+	if l.log, err = common.GetLogger(logfacility.LDAP); err != nil {
+		return nil, err
+	} // else if l.conn, err = ldap.
+} // func Connect(addr string) (*LDAPConnection, error)
