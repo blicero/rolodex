@@ -2,7 +2,7 @@
 // -*- coding: utf-8; mode: go; -*-
 // Created on 23. 12. 2015 by Benjamin Walkenhorst
 // (c) 2015 Benjamin Walkenhorst
-// Time-stamp: <2023-03-06 23:26:59 krylon>
+// Time-stamp: <2023-03-08 18:54:38 krylon>
 
 // Package common provides constants, variables and functions used
 // throughout the application.
@@ -16,6 +16,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/blicero/rolodex/common/logfacility"
@@ -97,7 +98,7 @@ func SetBaseDir(path string) {
 
 // GetLogger Tries to create a named logger instance and return it.
 // If the directory to hold the log file does not exist, try to create it.
-func GetLogger(name string) (*log.Logger, error) {
+func GetLogger(id logfacility.ID) (*log.Logger, error) {
 	var err error
 	err = InitApp()
 	if err != nil {
@@ -105,8 +106,8 @@ func GetLogger(name string) (*log.Logger, error) {
 	}
 
 	logName := fmt.Sprintf("%s.%s",
-		AppName,
-		name)
+		strings.ToLower(AppName),
+		id)
 
 	var logfile *os.File
 	logfile, err = os.OpenFile(LogPath, os.O_RDWR|os.O_APPEND|os.O_CREATE, 0644)
