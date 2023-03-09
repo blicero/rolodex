@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 07. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-08 22:01:23 krylon>
+// Time-stamp: <2023-03-09 11:59:01 krylon>
 
 // Package padl uses an LDAP directory as its backend.
 // I wanted to name the package ldap, which would have been the obvious name,
@@ -11,6 +11,7 @@ package padl
 
 import (
 	"log"
+	"time"
 
 	"github.com/blicero/rolodex/common"
 	"github.com/blicero/rolodex/common/logfacility"
@@ -39,6 +40,9 @@ func Connect(addr string) (*LDAPConnection, error) {
 			err.Error())
 		return nil, err
 	}
+
+	l.conn.SetTimeout(time.Second * 3)
+	l.conn.Start()
 
 	return l, nil
 } // func Connect(addr string) (*LDAPConnection, error)
