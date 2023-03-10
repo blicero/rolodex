@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 08. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-10 11:18:46 krylon>
+// Time-stamp: <2023-03-10 16:08:43 krylon>
 
 package padl
 
@@ -22,32 +22,29 @@ func TestSearch(t *testing.T) {
 		res *ldap.SearchResult
 	)
 
+	const expectedResults = 3
+
 	req = ldap.NewSearchRequest(
 		"ou=contacts,dc=krylon,dc=net",
 		ldap.ScopeWholeSubtree,
 		ldap.DerefAlways,
 		0,
-		1000,
+		0,
 		false,
 		"(&(objectClass=inetOrgPerson)(sn=Simpson))",
 		[]string{"givenName", "sn", "mail", "streetAddress", "l"},
 		nil)
 
-	if res, err = l.conn.SearchWithPaging(req, 4096); err != nil {
+	if res, err = l.conn.Search(req); err != nil {
 		t.Errorf("Failed to perform search on directory: %s\n",
 			err.Error())
-	} else if len(res.Entries) < 3 {
-		t.Errorf("Unexpected number of results: %d (expected 3)",
-			len(res.Entries))
+	} else if len(res.Entries) < expectedResults {
+		t.Errorf("Unexpected number of results: %d (expected %d)",
+			len(res.Entries),
+			expectedResults)
 	}
 
-	// fmt.Printf("SearchResult: %s\n",
-	// 	spew.Sdump(res))
-
-	for _, entry := range res.Entries {
-		// t.Logf("Entry %d: %v",
-		// 	idx,
-		// 	entry.GetAttributeValue("cn"))
-		entry.PrettyPrint(2)
-	}
+	// for _, entry := range res.Entries {
+	// 	entry.PrettyPrint(2)
+	// }
 } // func TestSearch(t *testing.T)
