@@ -3,7 +3,6 @@ module github.com/blicero/rolodex
 go 1.19
 
 require (
-	github.com/davecgh/go-spew v1.1.0
 	github.com/go-ldap/ldap/v3 v3.4.4
 	github.com/hashicorp/logutils v1.0.0
 	github.com/odeke-em/go-uuid v0.0.0-20151221120446-b211d769a9aa
