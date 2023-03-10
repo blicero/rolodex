@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 08. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-08 22:29:01 krylon>
+// Time-stamp: <2023-03-10 10:46:04 krylon>
 
 package padl
 
@@ -30,4 +30,6 @@ func TestConnect(t *testing.T) {
 			addr,
 			err.Error())
 	}
+
+	l.conn.Debug = true
 } // func TestConnect(t *testing.T)
