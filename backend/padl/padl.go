@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 07. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-09 11:59:01 krylon>
+// Time-stamp: <2023-03-10 16:48:48 krylon>
 
 // Package padl uses an LDAP directory as its backend.
 // I wanted to name the package ldap, which would have been the obvious name,
@@ -42,7 +42,7 @@ func Connect(addr string) (*LDAPConnection, error) {
 	}
 
 	l.conn.SetTimeout(time.Second * 3)
-	l.conn.Start()
+	// l.conn.Start()
 
 	return l, nil
 } // func Connect(addr string) (*LDAPConnection, error)
