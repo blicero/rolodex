@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 06. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-09 16:28:12 krylon>
+// Time-stamp: <2023-03-10 20:25:49 krylon>
 
 // Package object provides the data types to live in our address book.
 package object
@@ -29,6 +29,7 @@ func (p *Person) FullName() string {
 type PostalAddress struct {
 	Street     string
 	Number     string
+	City       string
 	PostalCode string
 	Country    string
 	Additional []string

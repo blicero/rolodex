@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 01. 02. 2021 by Benjamin Walkenhorst
 // (c) 2021 Benjamin Walkenhorst
-// Time-stamp: <2023-03-08 22:29:41 krylon>
+// Time-stamp: <2023-03-10 20:24:44 krylon>
 
 //go:build ignore
 // +build ignore
@@ -62,6 +62,7 @@ var candidates = map[string][]string{
 	"generate": []string{
 		"common",
 		"common/logfacility",
+		"object/fields",
 	},
 	"test": []string{
 		"backend/padl",
@@ -70,13 +71,17 @@ var candidates = map[string][]string{
 		"common",
 		"common/logfacility",
 		"backend/padl",
+		"backend/query",
 		"object",
+		"object/fields",
 	},
 	"lint": []string{
 		"common",
 		"common/logfacility",
 		"backend/padl",
+		"backend/query",
 		"object",
+		"object/fields",
 	},
 }
 
