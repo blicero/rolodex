@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 08. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-10 10:42:39 krylon>
+// Time-stamp: <2023-03-10 11:18:46 krylon>
 
 package padl
 
@@ -29,7 +29,7 @@ func TestSearch(t *testing.T) {
 		0,
 		1000,
 		false,
-		"(sn=Simpson)",
+		"(&(objectClass=inetOrgPerson)(sn=Simpson))",
 		[]string{"givenName", "sn", "mail", "streetAddress", "l"},
 		nil)
 
