@@ -1,5 +1,5 @@
 # -*- mode: org; fill-column: 78; -*-
-# Time-stamp: <2023-03-10 11:07:08 krylon>
+# Time-stamp: <2023-03-10 23:43:10 krylon>
 #+TAGS: html(h) javascript(j) go(g) web(w) internals(i) ui(u) bug(b) feature(f)
 #+TAGS: testing(t) network(n) optimize(o) refactor(r) cleanup(c)
 #+TODO: TODO(t)  RESEARCH(r) IMPLEMENT(i) TEST(e) | DONE(d) FAILED(f) CANCELLED(c)
@@ -17,25 +17,26 @@
    I use org-mode as a simple project management tool, including time
    tracking.
    #+BEGIN: clocktable :scope file :maxlevel 202 :emphasize t
-   #+CAPTION: Clock summary at [2023-03-10 Fr 11:07]
-   | Headline             | Time   |        |      |      |
-   |----------------------+--------+--------+------+------|
-   | *Total time*         | *2:25* |        |      |      |
-   |----------------------+--------+--------+------+------|
-   | *Rolodex*            | *2:25* |        |      |      |
-   | \_  /Components [/]/ |        | /2:25/ |      |      |
-   | \_    Backends [/]   |        |        | 2:21 |      |
-   | \_      LDAP         |        |        |      | 2:21 |
+   #+CAPTION: Clock summary at [2023-03-10 Fr 23:43]
+   | Headline               | Time   |        |      |      |
+   |------------------------+--------+--------+------+------|
+   | *Total time*           | *7:44* |        |      |      |
+   |------------------------+--------+--------+------+------|
+   | *Rolodex*              | *7:44* |        |      |      |
+   | \_  /Components [0/1]/ |        | /7:44/ |      |      |
+   | \_    Backends [0/1]   |        |        | 7:40 |      |
+   | \_      Search         |        |        |      | 5:04 |
+   | \_      LDAP           |        |        |      | 2:36 |
    #+END:
 ** Diary
-** Components [/]
+** Components [0/1]
    :PROPERTIES:
    :COOKIE_DATA: todo recursive
    :END:
    :LOGBOOK:
    CLOCK: [2023-03-08 Mi 21:53]--[2023-03-08 Mi 21:57] =>  0:04
    :END:
-*** Backends [/]
+*** Backends [0/1]
     :PROPERTIES:
     :COOKIE_DATA: todo recursive
     :END:
@@ -44,8 +45,16 @@
     providers like Google contacts.
     I'm starting with LDAP, though, because I have had contact with it before,
     even if it was a long time ago.
+**** TODO Search
+     :LOGBOOK:
+     CLOCK: [2023-03-10 Fr 18:39]--[2023-03-10 Fr 23:43] =>  5:04
+     :END:
+     I want to build a search facility that works across several different
+     backends, so I think I need something like an enum to describe the
+     different attributes/fields for a contact.
 **** LDAP
      :LOGBOOK:
+     CLOCK: [2023-03-10 Fr 18:22]--[2023-03-10 Fr 18:37] =>  0:15
      CLOCK: [2023-03-10 Fr 09:55]--[2023-03-10 Fr 11:07] =>  1:12
      CLOCK: [2023-03-09 Do 11:31]--[2023-03-09 Do 12:02] =>  0:31
      CLOCK: [2023-03-08 Mi 21:57]--[2023-03-08 Mi 22:35] =>  0:38
