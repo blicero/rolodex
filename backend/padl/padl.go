@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 07. 03. 2023 by Benjamin Walkenhorst
 // (c) 2023 Benjamin Walkenhorst
-// Time-stamp: <2023-03-10 23:42:55 krylon>
+// Time-stamp: <2023-03-15 22:24:42 krylon>
 
 // Package padl uses an LDAP directory as its backend.
 // I wanted to name the package ldap, which would have been the obvious name,
@@ -10,6 +10,7 @@
 package padl
 
 import (
+	"fmt"
 	"log"
 	"time"
 
@@ -75,7 +76,18 @@ func (c *LDAPConnection) Close() error {
 
 func (c *LDAPConnection) Search(q *query.Query) error {
 	var (
-		err  error
-		qstr string
+		err        error
+		subqueries = make([]string, 0, len(q.Request))
 	)
+
+	for field, text := range q.Request {
+		var s = fmt.Sprintf("(%s=%q)",
+			attributes[field],
+			text)
+		subqueries = append(subqueries, s)
+	}
+
+	// qstr =
+
+	return nil
 } // func (c *LDAPConnection) Search(q *query.Query) error
