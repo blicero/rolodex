@@ -1,5 +1,5 @@
 # -*- mode: org; fill-column: 78; -*-
-# Time-stamp: <2023-03-10 23:43:10 krylon>
+# Time-stamp: <2023-03-15 12:22:54 krylon>
 #+TAGS: html(h) javascript(j) go(g) web(w) internals(i) ui(u) bug(b) feature(f)
 #+TAGS: testing(t) network(n) optimize(o) refactor(r) cleanup(c)
 #+TODO: TODO(t)  RESEARCH(r) IMPLEMENT(i) TEST(e) | DONE(d) FAILED(f) CANCELLED(c)
@@ -13,19 +13,20 @@
   + multiple backends (LDAP, relational database, SQLite, etc.)
   + import and export from/to various sources and formats
   + synchronization across several instances / backends
+  I am using this file as kind of journal and todo list.
 ** Clocktable
    I use org-mode as a simple project management tool, including time
    tracking.
    #+BEGIN: clocktable :scope file :maxlevel 202 :emphasize t
-   #+CAPTION: Clock summary at [2023-03-10 Fr 23:43]
+   #+CAPTION: Clock summary at [2023-03-15 Mi 12:22]
    | Headline               | Time   |        |      |      |
    |------------------------+--------+--------+------+------|
-   | *Total time*           | *7:44* |        |      |      |
+   | *Total time*           | *8:13* |        |      |      |
    |------------------------+--------+--------+------+------|
-   | *Rolodex*              | *7:44* |        |      |      |
-   | \_  /Components [0/1]/ |        | /7:44/ |      |      |
-   | \_    Backends [0/1]   |        |        | 7:40 |      |
-   | \_      Search         |        |        |      | 5:04 |
+   | *Rolodex*              | *8:13* |        |      |      |
+   | \_  /Components [0/1]/ |        | /8:13/ |      |      |
+   | \_    Backends [0/1]   |        |        | 8:09 |      |
+   | \_      Search         |        |        |      | 5:33 |
    | \_      LDAP           |        |        |      | 2:36 |
    #+END:
 ** Diary
@@ -47,6 +48,7 @@
     even if it was a long time ago.
 **** TODO Search
      :LOGBOOK:
+     CLOCK: [2023-03-13 Mo 19:53]--[2023-03-13 Mo 20:22] =>  0:29
      CLOCK: [2023-03-10 Fr 18:39]--[2023-03-10 Fr 23:43] =>  5:04
      :END:
      I want to build a search facility that works across several different
